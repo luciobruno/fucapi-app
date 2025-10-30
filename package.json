@@ -20,6 +20,7 @@
     "@rneui/themed": "^4.0.0-rc.8",
     "@yudiel/react-qr-scanner": "^2.3.1",
     "axios": "^1.12.2",
+    "date-fns": "^4.1.0",
     "expo": "~54.0.8",
     "expo-constants": "~18.0.9",
     "expo-font": "~14.0.8",
