@@ -1,3 +1,4 @@
+import PNExample from "@/components/pushNotifications/pnExample";
 import api from "@/config/api";
 import { useAppDispatch } from "@/store";
 import { setUser } from "@/store/authSlice";
@@ -29,6 +30,7 @@ const Login = () => {
   };
   return (
     <View style={styles.content}>
+      <PNExample/>
       <TextInput
         style={styles.input}
         onChangeText={(v) => setEmail(v)}
