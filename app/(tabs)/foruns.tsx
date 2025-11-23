@@ -305,7 +305,7 @@ export default function TabTwoScreen() {
   };
   
   const handleOpenReplyModal = (reply: Reply) => {
-    if (currentUser?.id !== reply.authorId) {
+    if (currentUser?.id !== reply.author) {
         Alert.alert("Acesso Negado", "Você só pode editar suas próprias respostas.");
         return;
     }
@@ -318,7 +318,7 @@ export default function TabTwoScreen() {
         Alert.alert("Erro", "O texto da resposta é obrigatório e deve ter pelo menos 5 caracteres.");
         return;
     }
-    if (currentUser?.id !== currentReply.authorId) {
+    if (currentUser?.id !== currentReply.author) {
         Alert.alert("Acesso Negado", "Você só pode atualizar suas próprias respostas.");
         return;
     }
@@ -341,7 +341,7 @@ export default function TabTwoScreen() {
 
   const handleDeleteReply = (replyId: number) => {
     const replyToDelete = replies.find(r => r.id === replyId);
-    if (currentUser?.id !== replyToDelete?.authorId) {
+    if (currentUser?.id !== replyToDelete?.author) {
         Alert.alert("Acesso Negado", "Você só pode deletar suas próprias respostas.");
         return;
     }
