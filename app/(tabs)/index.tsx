@@ -17,15 +17,15 @@ export default function HomeScreen() {
     // load app users list
     loadUsers();
 
-    (async () => {
-      try {
-        const raw = await AsyncStorage.getItem("auth_user");
-        if (raw) {
-          const user = JSON.parse(raw);
-          dispatch(setUser(user));
-        }
-      } catch (e) {}
-    })();
+      (async () => {
+        try {
+          const raw = await AsyncStorage.getItem("auth_user");
+          if (raw) {
+            const user = JSON.parse(raw);
+            dispatch(setUser(user));
+          }
+        } catch (e) {}
+      })();
   }, []);
 
   const loadUsers = async () => {
